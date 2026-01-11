@@ -19,7 +19,16 @@
         <span class="brand__text">Cantine PaoloLeo</span>
       </a>
 
-      <nav class="nav" aria-label="Navigazione principale">
+      <!-- Bottone menu (solo mobile) -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="site-nav"
+        aria-expanded="false">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="nav" aria-label="Navigazione principale">
         <a href="#chi-siamo">Chi siamo</a>
         <a href="#territorio">Territorio</a>
         <a href="#pilastri">Pilastri</a>
@@ -38,7 +47,7 @@
       <div class="container hero__inner">
         <div class="hero__text">
           <p class="kicker">Il nostro impegno per un futuro migliore</p>
-          <h1 id="hero-title">Sostenibilità</h1>
+          <h1 id="hero-title">Sostenibilità nel settore vitivinicolo</h1>
           <p class="lead">
             La nostra azienda ha avviato negli ultimi anni un percorso orientato all’integrazione della sostenibilità nelle proprie attività produttive. Le azioni intraprese riguardano diversi ambiti, tra cui la gestione delle risorse, il rispetto del territorio e l’organizzazione dei processi aziendali. Questo approccio è supportato dall’adesione a standard riconosciuti, come la certificazione Equalitas, che fornisce un quadro di riferimento per la valutazione delle pratiche adottate.
           </p>
@@ -50,7 +59,7 @@
         </div>
 
         <figure class="hero__media" aria-label="Immagine di copertina">
-          <img src="asset/vigneto.jpg" alt="Vigneto e paesaggio del Salento" />
+          <img src="asset/vigneto.jpg" alt="Vigneti e ambiente naturale del Salento" />
         </figure>
       </div>
     </section>
@@ -85,7 +94,7 @@
         </div>
       </div>
 
-      <figure class="hero__media" aria-label="Immagine di copertina">
+      <figure class="about__media" aria-label="Immagine di copertina">
           <img src="asset/noi.jpg" alt="Vigneto e paesaggio del Salento" />
         </figure>
     </div>
@@ -151,7 +160,7 @@
         <div class="tiles" role="list">
           <article class="tile" role="listitem">
             <a class="tile__link" href="#ambientale" aria-label="Vai a sostenibilità ambientale">
-              <img class="tile__img" src="asset/ambientale.jpg" alt="" />
+              <img class="tile__img" src="asset/ambientale.jpg" alt="Vigneti e ambiente naturale del Salento" />
               <div class="tile__body">
                 <h2 class="tile__title">Sostenibilità<br><span>Ambientale</span></h2>
                 <span class="tile__cta">Scopri di più</span>
@@ -161,7 +170,7 @@
 
           <article class="tile" role="listitem">
             <a class="tile__link" href="#sociale" aria-label="Vai a sostenibilità sociale">
-              <img class="tile__img" src="asset/sociale.jpg" alt="" />
+              <img class="tile__img" src="asset/sociale.jpg" alt="Lavoratori e attività sociali dell’azienda" />
               <div class="tile__body">
                 <h2 class="tile__title">Sostenibilità<br><span>Sociale</span></h2>
                 <span class="tile__cta">Scopri di più</span>
@@ -171,7 +180,7 @@
 
           <article class="tile" role="listitem">
             <a class="tile__link" href="#economica" aria-label="Vai a sostenibilità economica">
-              <img class="tile__img" src="asset/economica.jpg" alt="" />
+              <img class="tile__img" src="asset/economica.jpg" alt="Processi produttivi e sostenibilità economica" />
               <div class="tile__body">
                 <h2 class="tile__title">Sostenibilità<br><span>Economica</span></h2>
                 <span class="tile__cta">Scopri di più</span>
@@ -282,7 +291,7 @@
                 <td>~88%</td>
                 <td>62–82% (per impianto)</td>
                 <td>Nel 2024 diminuisce per aumento della produzione. Non è inefficienza, ma crescita dei volumi.</td>
-                <tr>
+              </tr>
                 <td>Copertura fabbisogno energetico</td>
                 <td>n.d.</td>
                 <td>~45%</td>
@@ -362,9 +371,22 @@
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="muted">Pagina realizzata a scopo didattico da studente Fasano Luca 0312301375</p>
+      <p class="muted"> Project work – Pagina realizzata a scopo didattico | Fasano Luca 0312301375</p>
       <a class="muted" href="#contenuto">Torna su</a>
     </div>
   </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('#site-nav');
+    if (!btn || !nav) return;
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+</script>
 </body>
 </html>
