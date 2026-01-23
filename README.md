@@ -14,3 +14,10 @@ Aprire il file `index.html` tramite Live Server in Visual Studio Code. (Strument
 ## Fonti
 - Report di sostenibilità Cantine PaoloLeo
 - Sito ufficiale Cantine PaoloLeo (uso didattico)
+
+## Funzionalità
+La pagina utilizza JavaScript per gestire semplici interazioni, come il menu nella versione mobile.
+
+## Note
+I contenuti e le immagini sono utilizzati a scopo didattico e rielaborati a partire da fonti ufficiali.
+
