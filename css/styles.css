@@ -184,7 +184,7 @@ a:hover {
 
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 0.85fr;
+  grid-template-columns: 1fr;
   gap: 16px;
   align-items: center;
 }
