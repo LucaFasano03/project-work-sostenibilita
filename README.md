@@ -3,7 +3,7 @@
 Questo repository contiene una pagina web realizzata in HTML, CSS e JavaScript per la comunicazione delle attività di sostenibilità di un’impresa del settore vitivinicolo.
 
 ## Avvio del progetto
-Aprire il file `index.html` tramite Live Server in Visual Studio Code. (Strumento utilizzato da me)
+Aprire il file `index.html` tramite GitHub-pages (usare link presente nella descrizione) o Live Server in Visual Studio Code. (Strumento utilizzato da me)
 
 ## Struttura del progetto
 - `index.html` – struttura della pagina
