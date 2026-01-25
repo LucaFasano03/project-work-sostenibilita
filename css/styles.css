@@ -171,12 +171,6 @@ a:hover {
 
 /* Hero 
   Prima sezione della pagina: testo + immagine. Ho usato un gradiente leggero. */
-@media (max-width: 480px){
-  .hero{
-    padding: 36px 0 18px;
-  }
-}
-@media (max-width: 768px){
 .hero {
   padding: 56px 0 22px;
   background: linear-gradient(180deg, var(--bg-muted) 0%, var(--bg) 100%);
@@ -184,20 +178,19 @@ a:hover {
 
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 26px;
   align-items: center;
 }
 
 .hero h1 {
   margin: 0 0 10px;
-  font-size: clamp(2.2rem, 3.3vw, 3.1rem);
+  font-size: clamp(2.1rem, 3.3vw, 3.1rem);
   line-height: 1.05;
   color: var(--brand);
 }
 
 .hero__media {
-  order: 2;
   margin: 0;
   border-radius: var(--radius);
   overflow: hidden;
@@ -208,14 +201,9 @@ a:hover {
 
 .actions {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 14px;
-}
-
-.lead {
-  max-width: none;
-}
+  margin-top: 18px;
 }
 
 /* Pulsanti 
@@ -263,7 +251,7 @@ a:hover {
 }
 
 .about__text p {
-  margin-top: 0 0 16px;
+  margin: 0 0 16px;
   color: var(--muted);
 }
 
@@ -297,7 +285,7 @@ a:hover {
 }
 
 .list {
-  margin: 12px 0 0;
+  margin: 12px 0 16px;
   padding-left: 18px;
   color: var(--muted);
 }
@@ -329,11 +317,9 @@ a:hover {
 
 /* Box pilastri 
   Riquadri con immagine di sfondo e overlay per rendere leggibile il testo.*/
-
-@media (max-width: 768px){
 .tiles {
   display: grid;
-  gap: 20px;
+  gap: 16px;
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -360,6 +346,7 @@ a:hover {
   opacity: 0.9;
   transform: scale(1.02);
   position: absolute;
+  inset: 0;
 }
 
 /* overlay più caldo, meno nero */
@@ -373,7 +360,7 @@ a:hover {
   background: linear-gradient(
     180deg,
     rgba(107, 31, 43, 0.09) 0%,
-    /* bordeaux soft */ rgba(46, 46, 46, 0.72) 100% /* antracite */
+    rgba(46, 46, 46, 0.72) 100%
   );
   color: #fff;
 }
@@ -392,16 +379,13 @@ a:hover {
   align-items: center;
   gap: 8px;
   width: fit-content;
-  padding: 10px 16px;
+  padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,.25); /* avorio trasparente*/
+  background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(247, 245, 242, 0.35);
   font-weight: 700;
-  font-size: 1rem;
   color: #fff;
 }
-}
-
 
 /* Layout sezione Territorio */
 .territorio-layout {
@@ -678,4 +662,47 @@ tbody tr:hover {
   height: 36px;
   width: auto;
   display: block;
+}
+
+/* Mobile fix (miglioramenti per la visualizzazione delle foto)*/
+
+/* Hero - Mobile */
+@media (max-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lead {
+    max-width: none;
+  }
+
+  .hero__media {
+    order: 2;
+  }
+
+  .actions {
+    margin-top: 14px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 36px 0 18px;
+  }
+}
+
+/* Titles - Mobile */
+@media (max-width: 768px) {
+  .tiles {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tile__cta {
+    padding: 10px 16px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.25);
+  }
 }
